@@ -53,7 +53,6 @@ import { useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 import roleCheck from "@/access/roleCheck";
-import { UserControllerService } from "../../generated";
 
 const router = useRouter();
 const selectedKeys = ref(["/"]);

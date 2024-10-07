@@ -230,7 +230,7 @@ const onPageChange = async (page: number) => {
 
 // 跳转到题目详情页
 const toDescription = (record: Problem) => {
-  return `/problem/description/${record.id}`;
+  return `/problems/${record.id}`;
 };
 
 // 搜索

@@ -8,7 +8,7 @@ import AddProblemView from "@/views/problem/AddProblemView.vue";
 import ManageProblemView from "@/views/problem/ManageProblemView.vue";
 import ProblemView from "@/views/problem/ProblemView.vue";
 import AboutView from "@/views/AboutView.vue";
-import ProblemDescriptionView from "@/views/problem/ProblemDescriptionView.vue";
+import ProblemDetailView from "@/views/problem/ProblemDetailView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -48,7 +48,7 @@ export const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/problem",
+    path: "/problems",
     name: "Problems",
     component: ProblemView,
     meta: {
@@ -68,9 +68,9 @@ export const routes: Array<RouteRecordRaw> = [
   },
   //todo 问题描述页面，应该是位于问题页面的子页面，但是这样会导致权限控制失效，暂时先这样
   {
-    path: "/problem/description/:id",
+    path: "/problems/:id",
     name: "Problem Description",
-    component: ProblemDescriptionView,
+    component: ProblemDetailView,
     props: true,
     meta: {
       hideInMenu: true,
@@ -84,7 +84,7 @@ export const routes: Array<RouteRecordRaw> = [
     meta: {
       hideInMenu: true,
       meta: {
-        access: ROLE_ENUM.NOT_LOGIN,
+        access: ROLE_ENUM.USER,
       },
     },
   },
